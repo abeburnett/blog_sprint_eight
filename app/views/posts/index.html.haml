@@ -1,0 +1,15 @@
+%h1 Posts
+
+%table
+  %tr
+    %th Title
+    %th Text
+    %th
+  - @posts.each do |post|
+    %tr
+      %td
+        = post.title
+      %td
+        = post.text
+      %td
+        = link_to 'Show', post
