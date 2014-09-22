@@ -2,8 +2,13 @@
 %html
   %head
     %title Blog Sprint Eight
+    %link(rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/5.0.0/flexboxgrid.min.css" type="text/css")
     = stylesheet_link_tag       'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag    'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    .row
+      .box
+        %h2 Blog by Abe
+    .row.between-xs
+      = yield

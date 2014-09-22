@@ -1,17 +1,35 @@
-%h1 Posts
+.col-xs-4.border-style-templating
+  %h1 Posts
 
-= link_to 'New Post', new_post_path
 
-%table
-  %tr
-    %th Title
-    %th Text
-    %th
-  - @posts.each do |post|
+  = link_to 'New Post', new_post_path
+
+  %table
     %tr
-      %td
-        = post.title
-      %td
-        = post.text
-      %td
-        = link_to 'Show', post
+      %th Title
+      %th Text
+      %th
+    - @posts.each do |post|
+      %tr
+        %td
+          = post.title
+        %td
+          = post.text
+        %td
+          = link_to 'Show', post
+
+.col-xs-7.border-style-templating
+  .row
+    .col-xs-12
+      .row
+        .col-xs
+          .box
+            %h2 My first post
+          .box
+            %span My first blog post was blah blah blah
+      .row
+        .col-xs
+          %div
+            %h4 Comments
+          %div
+            %span Well, I think that...
